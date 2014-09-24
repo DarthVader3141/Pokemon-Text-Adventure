@@ -1,7 +1,12 @@
 public class PokemonGame {
 
 	public static void main(String[] args) {
-		System.out.println("hello world1");
+		
+		Pokemon tom = new Pokemon();
+		
+		tom.setHealth(10);
+		
+		System.out.println("hello "+ tom.getHealth());
 	}
 
 }
