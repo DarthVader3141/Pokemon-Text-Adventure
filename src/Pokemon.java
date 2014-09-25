@@ -1,15 +1,19 @@
 
 public class Pokemon {
 	
-	public Pokemon(int attack, int speed, int defense, int health) {
-		  
-	}
-	
 	int attack;
 	int speed;
 	int defense;
 	int health;
 	
+	public Pokemon(int attack, int speed, int defense, int health) {
+		this.attack = attack;
+		this.speed = speed;
+		this.health = health;
+		this.defense = defense;
+	}
+	
+
 	public void setHealth(int health1) {
 		health = health1;
 	}
