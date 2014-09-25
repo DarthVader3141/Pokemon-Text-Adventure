@@ -6,13 +6,15 @@ public class Pokemon {
 	int attack;
 	int speed;
 	int defense;	
+	Type type;
 	
-	public Pokemon(String name, int health, int attack, int speed, int defense) {
+	public Pokemon(String name, int health, int attack, int speed, int defense, Type type) {
 		this.attack = attack;
 		this.speed = speed;
 		this.health = health;
 		this.defense = defense;
 		this.name = name;
+		this.type = type;
 	}
 	
 
@@ -36,8 +38,13 @@ public class Pokemon {
 		return defense;
 	}
 	
+	public Type getType() {
+		return type;
+	}
+	
 	public void printAttributes() {
 		System.out.println("Name: " + name);
+		System.out.println("Type : " + type);
 		System.out.println("Health: " + health);
 		System.out.println("Attack: " + attack);
 		System.out.println("Speed: " + speed);

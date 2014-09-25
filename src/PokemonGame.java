@@ -5,14 +5,17 @@ public class PokemonGame {
         String move1 = "Flamestrike";
         String move2 = "Thundershock";
         
-        Pokemon communistMudkip = new Pokemon("Joe",50,2,2,2);
-        Pokemon enemyMudkip = new Pokemon("Steve",50,3,3,3);
+        Pokemon communistMudkip = new Pokemon("Joe",50,2,2,2,Type.FIRE);
+        Pokemon enemyMudkip = new Pokemon("Steve",50,3,3,3,Type.WATER);
         
         BattleMenu bMenu = new BattleMenu(move1,move2);
         
         //      communistMudkip.setHealth(1337);
         while (enemyMudkip.getHealth()>0 && communistMudkip.getHealth()>0){
-        
+        	
+        	communistMudkip.printAttributes();
+            enemyMudkip.printAttributes();
+            
             bMenu.displayMenu();
             int input = bMenu.getInput();
         
