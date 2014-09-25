@@ -1,7 +1,11 @@
+import java.util.Scanner;
+
 public class BattleMenu {
 	
 	String move1;
 	String move2;
+	int input;
+	private Scanner scanner;
 	
 	public BattleMenu(String move1, String move2){
 		this.move1 = move1;
@@ -15,7 +19,9 @@ public class BattleMenu {
 		System.out.println();
 	}
 	
-	public void getInput() {
-		
+	public int getInput() {
+		scanner = new Scanner(System.in);
+		int input = scanner.nextInt();
+		return input;
 	}
 }
