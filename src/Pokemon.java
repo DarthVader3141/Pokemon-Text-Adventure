@@ -1,6 +1,10 @@
 
 public class Pokemon {
 	
+	public Pokemon(int attack, int speed, int defense, int health) {
+		  
+	}
+	
 	int attack;
 	int speed;
 	int defense;

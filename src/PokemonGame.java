@@ -2,11 +2,11 @@ public class PokemonGame {
 
 	public static void main(String[] args) {
 		
-		Pokemon tom = new Pokemon();
+		Pokemon communistMudkip = new Pokemon(1,2,3,4);
 		
-		tom.setHealth(10);
+//		communistMudkip.setHealth(1337);
 		
-		System.out.println("hello "+ tom.getHealth());
+		System.out.println("hello "+ communistMudkip.getHealth());
 	}
 
 }
