@@ -27,7 +27,7 @@ public class PokemonGame {
             communistMudkip.printAttributes();
             enemyMudkip.printAttributes();
         }
-       System.out.println("you win"); 
+       System.out.println("You win!"); 
     }
 
 }
