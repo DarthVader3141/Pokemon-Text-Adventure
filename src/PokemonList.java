@@ -7,7 +7,12 @@ public class PokemonList {
 		fileScan = new Scanner(new File("PokemonListGen1"));
 		while (fileScan.hasNext()){
 			pokemon1 = fileScan.nextLine();
-			System.out.println(pokemon1);
+			pokemonScan=new Scanner(pokemon1);
+			pokemonScan.useDelimiter("     ");
+			while(pokemonScan.hasNext()){
+				System.out.print("   " + pokemonScan.next());
+			}
+			System.out.println();
 		}
 	}
 }

@@ -1,13 +1,13 @@
-Pokemon:
-Bulbasaur
-Ivysaur
-Venusaur
-Charmander
-Charmeleon
-Charizard
-Squirtle
-Wartortle
-Blastoise
+Pokemon:     Type:
+Bulbasaur     Grass
+Ivysaur     Grass
+Venusaur     Grass
+Charmander     Fire
+Charmeleon     Fire
+Charizard     Fire
+Squirtle     Water
+Wartortle     Water
+Blastoise     Water
 Caterpie
 Metapod
 Butterfree
