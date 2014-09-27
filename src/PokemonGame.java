@@ -1,11 +1,15 @@
+import java.io.IOException;
+
 public class PokemonGame {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
         String move1 = "Flamestrike"; //to be replaced with Move objects
         String move2 = "Thundershock";
         
-        Pokemon communistMudkip = new Pokemon("Joe",50,2,2,2,Type.FIRE); //defines two Pokemon following the constructor
+        StatsFile stats = new StatsFile(); //instance of the StatsFile (to avoid static methods)
+        
+        Pokemon communistMudkip = new Pokemon(stats.getLine(4),50,2,2,2,Type.FIRE); //defines two Pokemon following the constructor
         Pokemon enemyMudkip = new Pokemon("Steve",50,3,3,3,Type.WATER);
         
         BattleMenu bMenu = new BattleMenu(move1,move2); //create a new menu with the two moves
