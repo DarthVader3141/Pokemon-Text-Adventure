@@ -2,10 +2,12 @@
 public class Pokemon {
 	
 	String name;
+	
 	int health;
 	int attack;
 	int speed;
-	int defense;	
+	int defense;
+	
 	Type type; //from enum of types
 	
 	public Pokemon(String name, int health, int attack, int speed, int defense, Type type) { //constructor for defining a new pokemon
@@ -26,7 +28,7 @@ public class Pokemon {
 		return health;
 	}
 	
-	public int getAttack() { //returns attack - may later be modifeid to scale off of level
+	public int getAttack() { //returns attack - may later be modified to scale off of level
 		return attack;
 	}
 	

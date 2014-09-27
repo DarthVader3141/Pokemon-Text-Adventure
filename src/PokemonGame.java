@@ -4,35 +4,34 @@ public class PokemonGame {
 
     public static void main(String[] args) throws IOException {
         
-        String move1 = "Flamestrike"; //to be replaced with Move objects
-        String move2 = "Thundershock";
+        Move splash = new Move("Splash", 5, Type.WATER);
+        Move flamethrower = new Move("Flamethrower", 5, Type.FIRE);
         
         StatsFile stats = new StatsFile(); //instance of the StatsFile (to avoid static methods)
         
-        Pokemon communistMudkip = new Pokemon(stats.getLine(4),50,2,2,2,Type.FIRE); //defines two Pokemon following the constructor
+        Pokemon communistMudkip = new Pokemon(stats.getLine(10),50,2,2,2,Type.FIRE); //defines two Pokemon following the constructor
         Pokemon enemyMudkip = new Pokemon("Steve",50,3,3,3,Type.WATER);
         
-        BattleMenu bMenu = new BattleMenu(move1,move2); //create a new menu with the two moves
+        BattleMenu bMenu = new BattleMenu(splash, flamethrower); //create a new menu with the two moves
         
-        //      communistMudkip.setHealth(1337);
-        while (enemyMudkip.getHealth()>0 && communistMudkip.getHealth()>0){ //loops until one Pokemon dies
+        while (enemyMudkip.getHealth() > 0 && communistMudkip.getHealth() > 0){ //loops until one Pokemon dies
         	
         	communistMudkip.printAttributes(); //print both pokemon's stats before a move is used
             enemyMudkip.printAttributes();
             
             bMenu.displayMenu(); //displays the moves in order
             
-            int input = bMenu.getInput(); //gets the next integer
+            int input = bMenu.getInput(); //gets the next integer from command line
         
             switch (input) { //different cases for each integer choice, if a case is not here, does nothing
             
                 case 1:
-                    enemyMudkip.setHealth(enemyMudkip.getHealth() - (communistMudkip.getAttack() * 2));
+                    enemyMudkip.setHealth(enemyMudkip.getHealth() - (communistMudkip.getAttack() * 5)); //damage the enemy using an arbitrary multiplier
                 case 2:
-                    enemyMudkip.setHealth(enemyMudkip.getHealth() - (communistMudkip.getAttack() * 3));
+                    enemyMudkip.setHealth(enemyMudkip.getHealth() - (communistMudkip.getAttack() * 4));
                 }
         }
-       System.out.println("You win!"); //upon one Pokmeon dying, print "You win"
+       System.out.println("You win!"); //upon one Pokemon dying, print "You win"
     }
 
 }

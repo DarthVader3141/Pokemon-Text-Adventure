@@ -12,7 +12,7 @@ public class StatsFile {
 		BufferedReader br = new BufferedReader(new InputStreamReader(fs)); //use a buffer from efficient reading
 			
 		while (i < line) { //run until counter reaches the desired line
-//			br.readLine();
+			
 			outputline = br.readLine(); //set the next line to the string that will be returned
 			i++;
 		}
