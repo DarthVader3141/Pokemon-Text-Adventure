@@ -8,15 +8,20 @@ public class Pokemon {
 	int speed;
 	int defense;
 	
+	Move move;
+	Move move1;
+	
 	Type type; //from enum of types
 	
-	public Pokemon(String name, int health, int attack, int speed, int defense, Type type) { //constructor for defining a new pokemon
+	public Pokemon(String name, int health, int attack, int speed, int defense, Type type, Move move, Move move1) { //constructor for defining a new pokemon
 		this.attack = attack;
 		this.speed = speed;
 		this.health = health;
 		this.defense = defense;
 		this.name = name;
 		this.type = type;
+		this.move = move;
+		this.move1 = move1;
 	}
 	
 
@@ -42,6 +47,18 @@ public class Pokemon {
 	
 	public Type getType() { //returns type from enum Type
 		return type;
+	}
+	
+	public Move getMove1() { //""
+		return move;
+	}
+	
+	public Move getMove2() { //""
+		return move1;
+	}
+	
+	public String getName() { //""
+		return name;
 	}
 	
 	public void printAttributes() { //prints to command line, possibly rethink this and have it return a string for printing

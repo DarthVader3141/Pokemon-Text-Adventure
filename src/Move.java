@@ -4,7 +4,7 @@ public class Move {
 	String name;
 	int damage;
 	Type type;
-	
+
 	public Move(String name, int damage, Type type) {
 		this.name = name;
 		this.damage = damage;
