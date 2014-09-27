@@ -29,9 +29,7 @@ public class Battle {
 			
 			bmenu.displayMenu(); //display the moves available to the player
 			
-			Move choice = new Move(null, 0, null);
-			
-			choice = bmenu.getInput(); //assign the chosen move from the menu to 'choice'
+			Move choice = bmenu.getInput(); //assign the chosen move from the menu to 'choice'
 			
 			System.out.println("" + friendlyPokemon.getName() + " uses " + choice.getName() + " and does " + friendlyPokemon.getAttack() * choice.getDamage() + " damage.");
 			

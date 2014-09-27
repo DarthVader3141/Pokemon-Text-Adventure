@@ -8,20 +8,20 @@ public class Pokemon {
 	int speed;
 	int defense;
 	
-	Move move;
 	Move move1;
+	Move move2;
 	
 	Type type; //from enum of types
 	
-	public Pokemon(String name, int health, int attack, int speed, int defense, Type type, Move move, Move move1) { //constructor for defining a new pokemon
+	public Pokemon(String name, int health, int attack, int speed, int defense, Type type, Move move1, Move move2) { //constructor for defining a new pokemon
 		this.attack = attack;
 		this.speed = speed;
 		this.health = health;
 		this.defense = defense;
 		this.name = name;
 		this.type = type;
-		this.move = move;
 		this.move1 = move1;
+		this.move2 = move2;
 	}
 	
 
@@ -50,11 +50,11 @@ public class Pokemon {
 	}
 	
 	public Move getMove1() { //""
-		return move;
+		return move1;
 	}
 	
 	public Move getMove2() { //""
-		return move1;
+		return move2;
 	}
 	
 	public String getName() { //""

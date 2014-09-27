@@ -16,15 +16,10 @@ public class BattleMenu {
 	}
 	
 	public void displayMenu() { //actually prints the menu - to be expanded later
-		Move movetest1 = new Move(null, input, null);
-		Move movetest2 = new Move(null, input, null);
-		
-		movetest1 = move1;
-		movetest2 = move2;
 		
 		System.out.println();
-		System.out.println("1: " + movetest1.getName());
-		System.out.println("2: " + movetest2.getName());
+		System.out.println("1: " + move1.getName());
+		System.out.println("2: " + move2.getName());
 		System.out.println();
 		
 	}
