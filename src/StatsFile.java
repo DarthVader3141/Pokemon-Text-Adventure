@@ -7,6 +7,7 @@ public class StatsFile {
 	public String getLine(int line) throws IOException{
 		
 		String linetoread = null;
+		int i = 0;
 /*		String pokemon1;
 		
 		Scanner fileScan,pokemonScan;
@@ -24,10 +25,10 @@ public class StatsFile {
 		FileInputStream fs= new FileInputStream("PokemonListGen1");
 		BufferedReader br = new BufferedReader(new InputStreamReader(fs));
 			
-		while (line < 30) {
+		while (i < line) {
 			br.readLine();
 			linetoread = br.readLine();
-			line++;
+			i++;
 		}
 		
 		return linetoread;
