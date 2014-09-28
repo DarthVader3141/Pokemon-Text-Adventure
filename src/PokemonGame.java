@@ -12,7 +12,7 @@ public class PokemonGame {
         Pokemon communistMudkip = new Pokemon("Bob",50,3,3,3,Type.FIRE, splash, flamethrower); //defines two Pokemon following the constructor
         Pokemon enemyMudkip = new Pokemon("Steve",50,3,3,3,Type.WATER, splash, flamethrower);
         
-        Battle battle = new Battle(communistMudkip, enemyMudkip);//create an isntance of Battle with the two Pokemon, the first being player-controlled
+        Battle battle = new Battle(communistMudkip, enemyMudkip);//create an instance of Battle with the two Pokemon, the first being player-controlled
         
         battle.runBattle(); //run the battle
         

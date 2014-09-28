@@ -1,6 +1,5 @@
 import java.io.IOException;
 
-
 public class Battle {
 	
 	Pokemon friendlyPokemon; //create the two Pokemon battling
@@ -19,6 +18,8 @@ public class Battle {
 		Move move2 = friendlyPokemon.getMove2();
 		
 		AI ai = new AI(enemyPokemon);
+		
+		WindowHandler.createWindow(); //create a blank window of set dimensions
 		
 	//	BattleMenu bmenu = new BattleMenu(move1,move2); //create a new BattleMenu with the moves availale to the player
 		
@@ -44,7 +45,7 @@ public class Battle {
 			
 			enemyPokemon.setHealth(enemyPokemon.getHealth()- friendlyPokemon.getAttack() * choice.getDamage()); //set the health of the enemy to it's current health - the friendly's attack * the damage of the move		
 			
-			if (enemyPokemon.getHealth() <= 0) {
+			if (enemyPokemon.getHealth() <= 0) { //if the enemy pokemon dies, print "you win" and return
 				
 				System.out.println();
 				System.out.println(enemyPokemon.getName() + " has fainted. You win!");
@@ -58,7 +59,7 @@ public class Battle {
 			
 			friendlyPokemon.setHealth(friendlyPokemon.getHealth()- enemyPokemon.getAttack() * aiChoice.getDamage()); //set the player's pokemon's health based on the ai's move and attack
 			
-			if (friendlyPokemon.getHealth() <= 0) { //if you have than 0 HP, print "You lose" and return 
+			if (friendlyPokemon.getHealth() <= 0) { //if you have less than 0 HP, print "You lose" and return 
 				
 				System.out.println();
 				System.out.println(friendlyPokemon.getName() + " has fainted. You lose!");
