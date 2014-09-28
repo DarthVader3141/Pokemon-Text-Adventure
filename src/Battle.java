@@ -21,7 +21,7 @@ public class Battle {
 		
 		WindowHandler.createWindow(); //create a blank window of set dimensions
 		
-	//	BattleMenu bmenu = new BattleMenu(move1,move2); //create a new BattleMenu with the moves availale to the player
+	//	BattleMenu bmenu = new BattleMenu(move1,move2); //create a new BattleMenu with the moves available to the player
 		
 		while (friendlyPokemon.getHealth() > 0 && enemyPokemon.getHealth() > 0) { //loop until one pokemon dies
 			

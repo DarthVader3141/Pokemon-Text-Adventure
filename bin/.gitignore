@@ -1,8 +1,3 @@
-/.gitignore
-/StatsFile.class
-/Battle.class
-/AI.class
-/Window.class
-/FrameDemo.class
-/Battle$1.class
-/WindowHandler.class
+/WindowHandler$1.class
+/WindowHandler$2.class
+/WindowHandler$3.class
