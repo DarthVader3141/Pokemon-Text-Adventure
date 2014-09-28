@@ -3,7 +3,7 @@ import javax.swing.*;
 
 public class WindowHandler {
 
-    public static void createAndShowGUI() {
+    public static void createWindow() {
 
         JFrame frame = new JFrame("FrameDemo"); //create a new JFrame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //sets what happens if it is closed
