@@ -24,6 +24,12 @@ public class Battle {
 		
 		while (friendlyPokemon.getHealth() > 0 && enemyPokemon.getHealth() > 0) { //loop until one pokemon dies
 			
+			for (int i = 0; i < 100; i++) {
+				
+				System.out.println(); //clear the console so following text will be in the same place each iteration
+				
+			}
+
 			friendlyPokemon.printAttributes(); //print the stats of both pokemon
 			enemyPokemon.printAttributes();
 			
@@ -48,7 +54,7 @@ public class Battle {
 			
 			Thread.sleep(1000); //wait for 1 second
 			
-			System.out.println("" + enemyPokemon.getName() + " uses " + choice.getName() + " and does " + enemyPokemon.getAttack() * aiChoice.getDamage() + " damage.");//tell which move the AI used and how much damag it did
+			System.out.println("" + enemyPokemon.getName() + " uses " + aiChoice.getName() + " and does " + enemyPokemon.getAttack() * aiChoice.getDamage() + " damage.");//tell which move the AI used and how much damag it did
 			
 			friendlyPokemon.setHealth(friendlyPokemon.getHealth()- enemyPokemon.getAttack() * aiChoice.getDamage()); //set the player's pokemon's health based on the ai's move and attack
 			
@@ -60,10 +66,13 @@ public class Battle {
 			
 			}
 			
-			Thread.sleep(1000); //wait for 1 second
+			Thread.sleep(2000); //wait for 2 seconds
 			
-			System.out.println(); //add a blank line for aesthetics
-			
+			for (int i = 0; i < 100; i++) {
+				
+				System.out.println(); //clear the console
+				
+			}
 		}
 		
 		

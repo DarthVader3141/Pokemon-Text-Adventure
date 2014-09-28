@@ -27,16 +27,21 @@ public class BattleMenu {
 	public Move getInput() { //returns next integer from System.in
 		
 		scanner = new Scanner(System.in);
-		int input = scanner.nextInt();
 		
-		switch (input) { //different cases for each integer choice, if a case is not here, does nothing
-        
-        case 1:
-             return move1;
-        case 2:
-             return move2;
-        }
-		
-		return null;
+		while (1 == 1) { //run until a move is selected properly
+			
+			int input = scanner.nextInt();//scan the user's choice
+			
+			switch (input) { //different cases for each integer choice, if a case is not here, does nothing
+
+			case 1:
+				return move1;
+			case 2:
+				return move2;
+			default:
+				System.out.println("Input not recognized, try again"); //in case there is a user error, try again
+
+			}
+		}
 	}
 }
