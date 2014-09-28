@@ -12,11 +12,10 @@ public class PokemonGame {
         Pokemon communistMudkip = new Pokemon("Bob",50,2,2,2,Type.FIRE, splash, flamethrower); //defines two Pokemon following the constructor
         Pokemon enemyMudkip = new Pokemon("Steve",50,3,3,3,Type.WATER, splash, flamethrower);
         
-        Battle battle = new Battle(communistMudkip, enemyMudkip);
+        Battle battle = new Battle(communistMudkip, enemyMudkip);//create an isntance of Battle with the two Pokemon, the first being player-controlled
         
-        battle.runBattle();
+        battle.runBattle(); //run the battle
         
-        System.out.println("You win!"); //upon one Pokemon dying, print "You win"
     }
 
 }
