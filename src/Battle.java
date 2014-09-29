@@ -19,7 +19,8 @@ public class Battle {
 		
 		AI ai = new AI(enemyPokemon);
 		
-		WindowHandler.createWindow(); //create a blank window of set dimensions
+		WindowHandler window = new WindowHandler(enemyPokemon, friendlyPokemon) ;
+		window.initComponents(); //creates window
 		
 	//	BattleMenu bmenu = new BattleMenu(move1,move2); //create a new BattleMenu with the moves available to the player
 		
@@ -30,20 +31,25 @@ public class Battle {
 				System.out.println(); //clear the console so following text will be in the same place each iteration
 				
 			}
+			
+			window.displayStats(); //display pokemon's stats in the window
 
-			friendlyPokemon.printAttributes(); //print the stats of both pokemon
-			enemyPokemon.printAttributes();
+//			friendlyPokemon.printAttributes(); //print the stats of both pokemon
+//			enemyPokemon.printAttributes();
 			
 			BattleMenu bmenu = new BattleMenu(move1,move2);
 			
 			bmenu.displayMenu(); //display the moves available to the player
 			
 			Move choice = bmenu.getInput(); //assign the chosen move from the menu to 'choice'
+//			Move choice = window.getMove();
 			Move aiChoice = ai.getMove(); //get the AI's move
 			
 			System.out.println("" + friendlyPokemon.getName() + " uses " + choice.getName() + " and does " + friendlyPokemon.getAttack() * choice.getDamage() + " damage."); //tell the user what it used
 			
 			enemyPokemon.setHealth(enemyPokemon.getHealth()- friendlyPokemon.getAttack() * choice.getDamage()); //set the health of the enemy to it's current health - the friendly's attack * the damage of the move		
+			
+			window.displayStats(); //display pokemon's stats in the window
 			
 			if (enemyPokemon.getHealth() <= 0) { //if the enemy pokemon dies, print "you win" and return
 				
@@ -58,6 +64,8 @@ public class Battle {
 			System.out.println("" + enemyPokemon.getName() + " uses " + aiChoice.getName() + " and does " + enemyPokemon.getAttack() * aiChoice.getDamage() + " damage.");//tell which move the AI used and how much damag it did
 			
 			friendlyPokemon.setHealth(friendlyPokemon.getHealth()- enemyPokemon.getAttack() * aiChoice.getDamage()); //set the player's pokemon's health based on the ai's move and attack
+			
+			window.displayStats(); //display pokemon's stats in the window
 			
 			if (friendlyPokemon.getHealth() <= 0) { //if you have less than 0 HP, print "You lose" and return 
 				
