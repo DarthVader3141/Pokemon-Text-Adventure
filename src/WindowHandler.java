@@ -2,7 +2,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 
-public class WindowHandler extends javax.swing.JFrame implements ActionListener {
+public class WindowHandler extends javax.swing.JFrame /*implements ActionListener*/ {
 	
 	
 	Pokemon pokemon1;
@@ -41,7 +41,7 @@ public class WindowHandler extends javax.swing.JFrame implements ActionListener 
     public void initComponents() {
     	
     	jButton3 = new javax.swing.JButton();
-    	jButton3.addActionListener(this);
+ //   	jButton3.addActionListener(this);
     	
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
