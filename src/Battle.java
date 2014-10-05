@@ -22,7 +22,7 @@ public class Battle {
 		WindowHandler window = new WindowHandler(enemyPokemon, friendlyPokemon) ;
 		window.initComponents(); //creates window
 		
-	//	BattleMenu bmenu = new BattleMenu(move1,move2); //create a new BattleMenu with the moves available to the player
+		BattleMenu bmenu = new BattleMenu(move1,move2); //create a new BattleMenu with the moves available to the player
 		
 		while (friendlyPokemon.getHealth() > 0 && enemyPokemon.getHealth() > 0) { //loop until one pokemon dies
 			
@@ -33,16 +33,10 @@ public class Battle {
 			}
 			
 			window.displayStats(); //display pokemon's stats in the window
-
-//			friendlyPokemon.printAttributes(); //print the stats of both pokemon
-//			enemyPokemon.printAttributes();
-			
-			BattleMenu bmenu = new BattleMenu(move1,move2);
 			
 			bmenu.displayMenu(); //display the moves available to the player
 			
 			Move choice = bmenu.getInput(); //assign the chosen move from the menu to 'choice'
-//			Move choice = window.getMove();
 			Move aiChoice = ai.getMove(); //get the AI's move
 			
 			System.out.println("" + friendlyPokemon.getName() + " uses " + choice.getName() + " and does " + friendlyPokemon.getAttack() * choice.getDamage() + " damage."); //tell the user what it used

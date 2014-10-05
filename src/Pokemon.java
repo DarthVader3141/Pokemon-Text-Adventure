@@ -61,14 +61,10 @@ public class Pokemon {
 		return name;
 	}
 	
-	public void printAttributes() { //prints to command line, possibly rethink this and have it return a string for printing
-		System.out.println("Name: " + name);
-		System.out.println("Type : " + type);
-		System.out.println("Health: " + health);
-		System.out.println("Attack: " + attack);
-		System.out.println("Speed: " + speed);
-		System.out.println("Defense: " + defense);
-		System.out.println();
+	public String listAttributes() { //prints to command line
+		
+		String attributes = "Name: " + name + "Type : " + type + "Health: " + health + "Attack: " + attack + "Speed: " + speed + "Defense: " + defense;
+		return attributes;
 	}
 	
 }
